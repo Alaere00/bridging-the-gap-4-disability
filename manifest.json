@@ -1,0 +1,20 @@
+{
+    "name": "ADHD Extension",
+    "description": "Technova Hackathon",
+    "manifest_version" : 3,
+    "version": "0.1",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.google.com/*"],
+            "css": [],
+            "js": ["background.js"]
+        }
+    ]
+}
